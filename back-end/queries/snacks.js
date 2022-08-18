@@ -1,6 +1,6 @@
 const db = require("../db/dbConfig.js");
 
-// index
+// Index Route
 const getAllSnacks = async () => {
   try {
     const allSnacks = await db.any("SELECT * FROM snacks");
@@ -10,17 +10,17 @@ const getAllSnacks = async () => {
   }
 };
 
-// show
+// Show Route
 const getSnack = async (id) => {
   try {
-    const oneSnack = await db.oneOrNone("SELECT * FROM snacks WHERE id=$1", id);
+    const oneSnack = await db.one("SELECT * FROM snacks WHERE id=$1", id);
     return oneSnack;
   } catch (err) {
     return err;
   }
 };
 
-// create
+// Create Route
 const createSnack = async (snack) => {
   const { name, fiber, protein, added_sugar, is_healthy, image } = snack;
   try {
@@ -34,18 +34,20 @@ const createSnack = async (snack) => {
   }
 };
 
-// delete
+// Delete Route
 const deleteSnack = async (id) => {
   try {
     const deletedSnack = await db.one(
-      "DELETE FROM snacks WHERE id=$1 RETURNING *", id);
+      "DELETE FROM snacks WHERE id=$1 RETURNING *",
+      id
+    );
     return deletedSnack;
   } catch (err) {
     return err;
   }
 };
 
-// update
+// Update Route
 const updateSnack = async (snack, id) => {
   const { name, fiber, protein, added_sugar, is_healthy, image } = snack;
   try {
