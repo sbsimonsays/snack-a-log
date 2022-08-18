@@ -10,7 +10,7 @@ const {
   createSnack,
   updateSnack,
   deleteSnack,
-} = require("../queries/snacks");
+} = require("../queries/snacks.js");
 
 // Read
 snacks.get("/", async (req, res) => {
@@ -30,8 +30,7 @@ snacks.get("/:id", async (req, res) => {
     res.json({ payload: snack, success: true });
   } else {
     res
-      .status(404)
-      .json({ payload: "not found", success: false, error: "Snack not found" });
+      .status(404).json({ payload: "not found", success: false, error: "Snack not found" });
   }
 });
 

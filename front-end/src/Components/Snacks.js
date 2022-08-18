@@ -3,6 +3,7 @@ import axios from "axios";
 import Snack from "../Components/Snack";
 
 const API = process.env.REACT_APP_API_URL;
+
 function Snacks() {
   const [snax, setSnax] = useState([]);
 
@@ -10,11 +11,11 @@ function Snacks() {
     axios
       .get(`${API}/snacks`)
       .then((res) => {
-        setSnax(res.data);
+        setSnax(res.data.payload);
         console.log(snax);
       })
       .catch((err) => console.error(err));
-  }, [snax]);
+  }, []);
   
   return (
     <div>

@@ -10,7 +10,7 @@
     "test": "jest --runInBand"
   },
   "keywords": [],
-  "author": "",
+  "author": "Spencer Simon",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
