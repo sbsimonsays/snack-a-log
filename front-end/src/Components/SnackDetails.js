@@ -14,7 +14,8 @@ function SnackDetails() {
   const API = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
-    axios.get(`${API}/snacks/${id}`).then((response) => {
+    axios.get(`${API}/snacks/${id}`)
+    .then((response) => {
       setSnack(response.data.payload);
     });
   }, [id, navigate, API]);
@@ -40,8 +41,8 @@ function SnackDetails() {
           {snack.is_healthy 
           ? <span> <img src={heartSolid}></img> </span> 
           : <span> <img src={heartOutline}></img> </span>}
-          {snack.name}
         </h3>
+          <h4>{snack.name}</h4>
         <h5>Fiber: {snack.fiber}</h5>
         <h5>Protein: {snack.protein}</h5>
         <h5>Sugar: {snack.added_sugar} </h5>
