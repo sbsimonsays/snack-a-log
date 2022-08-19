@@ -5,14 +5,13 @@ import Snack from "../Components/Snack";
 const API = process.env.REACT_APP_API_URL;
 
 function Snacks() {
-  const [snax, setSnax] = useState([]);
+  const [snacks, setSnacks] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${API}/snacks`)
       .then((res) => {
-        setSnax(res.data.payload);
-        console.log(snax);
+        setSnacks(res.data.payload);
       })
       .catch((err) => console.error(err));
   }, []);
@@ -20,7 +19,7 @@ function Snacks() {
   return (
     <div>
       <section>
-        {snax.map((snack) => (
+        {snacks.map((snack) => (
           <Snack key={snack.id} snack={snack} />
         ))}
       </section>

@@ -35,15 +35,15 @@ function SnackDetails() {
   return (
     <div className="Snackdetails">
       <article>
-         <h2> <img src={snack.image}></img> </h2>
+         <h2> <img src={snack.image} alt=""></img> </h2>
         <h3>
           {snack.is_healthy 
-          ? <span> <img src={heartSolid}></img> </span> 
-          : <span> <img src={heartOutline}></img> </span>}
+          ? <span> <img src={heartSolid} alt=""></img> </span> 
+          : <span> <img src={heartOutline} alt=""></img> </span>}
           {snack.name}
         </h3>
-        <h5>Fiber: {snack.fiber}</h5>
-        <h5>Protein: {snack.protein}</h5>
+        <h5>Fiber: {snack.fiber} </h5>
+        <h5>Protein: {snack.protein} </h5>
         <h5>Sugar: {snack.added_sugar} </h5>
         <div className="showNavigation">
           <div>
