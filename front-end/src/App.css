@@ -1,0 +1,29 @@
+body {
+    font-family: Overlock, cursive
+}
+
+h1 {
+    font-family: cursive
+}
+
+main {
+    width: 90;
+    margin: auto 0;
+}
+
+nav {
+    background-color: rgb(37, 36, 34);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em top bottom 15px, 3em left/right 45px;
+}
+
+nav {
+    margin-bottom: 1em, 15px;
+} 
+
+a {
+    text-decoration: none;
+    color: rgb(235, 94, 40);
+}

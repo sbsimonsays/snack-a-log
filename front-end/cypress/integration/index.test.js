@@ -35,6 +35,7 @@ describe("index page", () => {
       .find("h4 img")
       .should("have.attr", "alt", "unhealthy food");
   });
+
   describe("Index Page CSS", () => {
     it("has body with font Overlock, cursive", () => {
       cy.get("body")

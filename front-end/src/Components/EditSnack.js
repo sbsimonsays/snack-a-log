@@ -1,23 +1,28 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
-// import Button from "react-bootstrap/Button";
+import { useEffect, useState } from "react";
+import { useNavigate, Link, useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
 function EditSnack() {
-  let { index } = useParams();
-  const nav = useNavigate();
+  const { id } = useParams();
+  let navigate = useNavigate();
 
   const [snack, setSnack] = useState({
     name: "",
     fiber: 0,
     protein: 0,
     added_sugar: 0,
+    is_healthy: false,
     image: "",
   });
+
+  useEffect(() => {
+    axios
+      .get(`${API}/snacks/${id}`)
+      .then((res) => setSnack(res.data.payload))
+      .catch((err) => console.error(err));
+  }, [id, navigate]);
 
   const handleTextChange = (event) => {
     setSnack({ ...snack, [event.target.id]: event.target.value });
@@ -30,26 +35,21 @@ function EditSnack() {
     });
   };
 
-  useEffect(() => {
+  const editSnack = (updatedSnack) => {
     axios
-      .get(`${API}/snacks/${index}`)
-      .then((response) => setSnack(response.data))
-      .catch((error) => console.error(error));
-  }, [index]);
-
-  const updateSnack = () => {
-    axios
-      .put(`${API}/snacks/${index}`, snack)
-      .then((response) => {
-        setSnack(response.data);
-        nav(`/snacks/${index}`);
-      })
-      .catch((error) => console.log(error));
+      .put(`${API}/snacks/${id}`, updatedSnack)
+      .then(
+        () => {
+          navigate(`/snacks`);
+        },
+        (error) => console.error(error)
+      )
+      .catch((c) => console.warn("catch", c));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    updateSnack();
+    editSnack(snack);
   };
 
   return (
@@ -61,53 +61,51 @@ function EditSnack() {
           value={snack.name}
           type="text"
           onChange={handleTextChange}
-          placeholder="Name of Snack"
+          placeholder="Name"
           required
-        />
-        <label htmlFor="protein">Protein:</label>
-        <input
-          id="protein"
-          type="number"
-          name="Protein Amount"
-          value={snack.protein}
-          onChange={handleNumberChange}
         />
         <label htmlFor="fiber">Fiber:</label>
         <input
           id="fiber"
           type="number"
-          name="Fiber Amount"
+          required
           value={snack.fiber}
+          placeholder="Fiber Count"
+          onChange={handleNumberChange}
+        />
+        <label htmlFor="protein">Protein:</label>
+        <input
+          id="protein"
+          type="number"
+          name="protein"
+          value={snack.protein}
+          placeholder="Protein Count"
           onChange={handleNumberChange}
         />
         <label htmlFor="added_sugar">Added Sugar:</label>
         <input
           id="added_sugar"
           type="number"
-          name="Added Sugar"
+          name="added_sugar"
           value={snack.added_sugar}
+          placeholder="Sugar Count"
           onChange={handleNumberChange}
         />
-        <label htmlFor="url">Image URL:</label>
+        <label htmlFor="image">Image url:</label>
         <input
-          id="url"
-          type="text"
-          pattern="http[s]*://.+"
+          id="image"
           value={snack.image}
-          placeholder="http://"
+          type="text"
           onChange={handleTextChange}
         />
-        <br></br>
-        {/* <Button variant="success" type="submit"> */}
-        <input type="submit">FINISH</input>
-        {/* </Button> */}
+        <br />
+        <input type="submit" />
       </form>
-      <Link to={`/snacks/${index}`}>
-        BACK
-        {/* <Button variant="secondary">BACK</Button> */}
+      <Link to={`/snacks/${id}`}>
+        <button>Nevermind!</button>
       </Link>
     </div>
-  )
+  );
 }
 
 export default EditSnack;

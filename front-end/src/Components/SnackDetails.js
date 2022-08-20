@@ -35,50 +35,41 @@ function SnackDetails() {
   return (
     <div className="snackDetails">
       <article>
-        <span>
+        <h3>
           {" "}
-          <img src={snack.image} alt="food"></img>{" "}
-        </span>
-        <span>
-          {snack.is_healthy ? (
-            <span>
-              {" "}
-              <img src={heartSolid} alt="healthy food"></img>{" "}
-            </span>
-          ) : (
-            <span>
-              {" "}
-              <img src={heartOutline} alt="unhealthy food"></img>{" "}
-            </span>
-          )}
-        </span>
-        <h2>
-          {" "}
-          { snack.is_healthy
+          {snack.is_healthy
             ? "This Snack is Healthy!"
-            : "This Snack is Unhealthy!" }
-          {" "}
-        </h2>
-        {snack.name}
-        <h5>Fiber: {snack.fiber} </h5>
-        <h5>Protein: {snack.protein} </h5>
-        <h5>Sugar: {snack.added_sugar} </h5>
-        <div className="snackNavi">
-          <div>
-            <Link to={`/snacks`}>
-              <button>Back</button>
-            </Link>
-          </div>
-          <div>
-            <Link to={`/snacks/${id}/edit`}>
-              <button>Edit</button>
-            </Link>
-          </div>
-          <div>
-            <button onClick={handleDelete}>Delete</button>
-          </div>
+            : "This Snack is Unhealthy!"}{" "}
+        </h3>
+        <aside>
+          <img
+            src={snack.is_healthy ? { heartSolid } : { heartOutline }}
+            alt={snack.is_healthy ? "healthy food" : "unhealthy food"}
+          ></img>
+        </aside>
+        <div>
+          <img src={snack.image} alt={snack.name}></img>
+          <h4>{snack.name}</h4>
+          <h5>Fiber: {snack.fiber} </h5>
+          <h5>Protein: {snack.protein} </h5>
+          <h5>Added Sugar: {snack.added_sugar} </h5>
         </div>
       </article>
+      <div className="snackNavi">
+        <div>
+          <Link to={`/snacks`}>
+            <button>Back</button>
+          </Link>
+        </div>
+        <div>
+          <Link to={`/snacks/${id}/edit`}>
+            <button>Edit</button>
+          </Link>
+        </div>
+        <div>
+          <button onClick={handleDelete}>Delete</button>
+        </div>
+      </div>
     </div>
   );
 }

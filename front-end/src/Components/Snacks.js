@@ -15,7 +15,7 @@ function Snacks() {
       })
       .catch((err) => console.error(err));
   }, []);
-  
+
   return (
     <div>
       <section>
