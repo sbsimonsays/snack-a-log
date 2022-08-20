@@ -1,10 +1,13 @@
+// Dependencies
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// Components & Pages
 import Edit from "./Pages/Edit";
 import FourOFour from "./Pages/FourOFour";
 import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
 import Nav from "./Components/Nav";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
