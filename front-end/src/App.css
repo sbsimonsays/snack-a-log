@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    font-family: cursive
+    font-family: carterOne, cursive;
 }
 
 main {
@@ -16,14 +16,24 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em top bottom 15px, 3em left/right 45px;
+    padding: 1em top bottom 15px, 3em left right 45px;
+    padding-left: '';
+    padding-right: ;
+    padding-top: ;
+    padding-bottom: ;
 }
 
 nav {
-    margin-bottom: 1em, 15px;
+    margin-bottom: 1em 15px;
 } 
 
 a {
     text-decoration: none;
     color: rgb(235, 94, 40);
 }
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
