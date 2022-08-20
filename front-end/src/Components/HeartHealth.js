@@ -5,9 +5,10 @@ function HeartHealth({ snackHealth }) {
   return (
     <>
       <p>
-        {snackHealth.is_healthy 
+        {
+        snackHealth.is_healthy 
         ? ( <img src={heartSolid} alt="healthy food" />) 
-        : ( <img src={heartOutline} alt="unhealthy food" /> )
+        : ( <img src={heartOutline} alt="unhealthy food" />)
         }
       </p>
     </>

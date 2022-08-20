@@ -107,7 +107,7 @@ function EditSnack() {
         {/* <Button variant="secondary">BACK</Button> */}
       </Link>
     </div>
-  );
+  )
 }
 
 export default EditSnack;
