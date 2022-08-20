@@ -35,13 +35,24 @@ function SnackDetails() {
   return (
     <div className="Snackdetails">
       <article>
-         <h2> <img src={snack.image} alt=""></img> </h2>
-        <h3>
-          {snack.is_healthy 
-          ? <span> <img src={heartSolid} alt=""></img> </span> 
-          : <span> <img src={heartOutline} alt=""></img> </span>}
+        <span>
+          {" "}
+          <img src={snack.image} alt="food"></img>{" "}
+        </span>
+        <span>
+          {snack.is_healthy ? (
+            <span>
+              {" "}
+              <img src={heartSolid} alt="healthy food"></img>{" "}
+            </span>
+          ) : (
+            <span>
+              {" "}
+              <img src={heartOutline} alt="unhealthy food"></img>{" "}
+            </span>
+          )}
           {snack.name}
-        </h3>
+        </span>
         <h5>Fiber: {snack.fiber} </h5>
         <h5>Protein: {snack.protein} </h5>
         <h5>Sugar: {snack.added_sugar} </h5>

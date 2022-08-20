@@ -72,18 +72,18 @@ function NewSnack() {
         <br></br>
         <label htmlFor="added_sugar">Added Sugar:</label>
         <input
-          id="added-sugar"
+          id="added_sugar"
           type="number"
           value={snack.added_sugar}
           placeholder="Added Sugar Amount"
           onChange={handleNumberChange}
         />
         <br></br>
-        <label htmlFor="url">Image URL:</label>
+        <label htmlFor="image">Image:</label>
         <input
-          name="url"
+          name="image"
           type="text"
-          id="url"
+          id="image"
           pattern="http[s]*://.+"
           value={snack.image}
           placeholder="http://"

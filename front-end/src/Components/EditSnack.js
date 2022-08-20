@@ -54,60 +54,48 @@ function EditSnack() {
 
   return (
     <div className="Edit">
-      <h1>Edit Snack</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input
-          name="name"
           id="name"
-          type="text"
           value={snack.name}
+          type="text"
           onChange={handleTextChange}
-          placeholder="Name"
+          placeholder="Name of Snack"
           required
         />
-        <br></br>
+        <label htmlFor="protein">Protein:</label>
+        <input
+          id="protein"
+          type="number"
+          name="Protein Amount"
+          value={snack.protein}
+          onChange={handleNumberChange}
+        />
         <label htmlFor="fiber">Fiber:</label>
         <input
           id="fiber"
           type="number"
+          name="Fiber Amount"
           value={snack.fiber}
-          placeholder="Fiber"
-          onChange={handleTextChange}
-          required
-        />
-        <br></br>
-        <label htmlFor="protein">Protein:</label>
-        <input
-          name="protein"
-          id="protein"
-          type="number"
-          value={snack.protein}
           onChange={handleNumberChange}
-          placeholder="Protein"
-          required
         />
-        <br></br>
         <label htmlFor="added_sugar">Added Sugar:</label>
         <input
-          name="added_sugar"
-          id="addedsugar"
+          id="added_sugar"
           type="number"
+          name="Added Sugar"
           value={snack.added_sugar}
-          onChange={handleTextChange}
-          placeholder="Category"
-          required
+          onChange={handleNumberChange}
         />
-        <br></br>
-        <label htmlFor="image">Image URL:</label>
+        <label htmlFor="url">Image URL:</label>
         <input
-          name="image"
-          id="image"
+          id="url"
           type="text"
+          pattern="http[s]*://.+"
           value={snack.image}
+          placeholder="http://"
           onChange={handleTextChange}
-          placeholder="Image URL"
-          required
         />
         <br></br>
         {/* <Button variant="success" type="submit"> */}
@@ -115,6 +103,7 @@ function EditSnack() {
         {/* </Button> */}
       </form>
       <Link to={`/snacks/${index}`}>
+        BACK
         {/* <Button variant="secondary">BACK</Button> */}
       </Link>
     </div>

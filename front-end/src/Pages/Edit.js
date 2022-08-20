@@ -3,7 +3,7 @@ import EditSnack from "../Components/EditSnack";
 
 function Edit() {
   return (
-    <div>
+    <div className="EditPage">
       <EditSnack />
     </div>
   );

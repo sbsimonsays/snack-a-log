@@ -3,7 +3,7 @@ import NewSnack from "../Components/NewSnack";
 
 function New() {
   return (
-    <div>
+    <div className="NewPage">
       <NewSnack />
     </div>
   );
