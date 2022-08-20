@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Snack from "../Components/Snack";
 
+import "../Styles/StylinOnYou.css"
+
 const API = process.env.REACT_APP_API_URL;
 
 function Snacks() {

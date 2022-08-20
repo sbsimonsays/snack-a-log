@@ -1,4 +1,4 @@
-/* body {
+body {
     font-family: Arial, Helvetica, sans-serif, cursive;
 }
 
@@ -17,10 +17,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1em top bottom 15px, 3em left right 45px;
-    padding-left: '';
+    /* padding-left: '';
     padding-right: ;
     padding-top: ;
-    padding-bottom: ;
+    padding-bottom: ; */
 }
 
 nav {
@@ -52,4 +52,4 @@ h4 {
 
 .Snacks img {
     width: 150px
-} */
+}
