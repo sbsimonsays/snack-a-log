@@ -7,7 +7,7 @@ const API = process.env.REACT_APP_API_URL;
 function NewSnack() {
   let navigate = useNavigate();
 
-  const addSnack = () => {
+  const addSnack = (snack) => {
     axios
       .post(`${API}/snacks`, snack)
       .then(
@@ -41,8 +41,9 @@ function NewSnack() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addSnack();
+    addSnack(snack);
   };
+  
   return (
     <div className="New">
       <form onSubmit={handleSubmit}>

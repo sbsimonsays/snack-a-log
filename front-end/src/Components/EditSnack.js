@@ -39,7 +39,7 @@ function EditSnack() {
       .put(`${API}/snacks/${id}`, updatedSnack)
       .then(
         () => {
-          navigate(`/snacks/${id}`);
+          navigate(`/snacks`);
         },
         (error) => console.error(error)
       )
@@ -83,7 +83,7 @@ function EditSnack() {
           placeholder="Protein Count"
           onChange={handleNumberChange}
         />
-        <label htmlFor="added_sugar">added_sugar:</label>
+        <label htmlFor="added_sugar">Added Sugar:</label>
         <input
           id="added_sugar"
           type="number"

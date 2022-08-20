@@ -5,6 +5,7 @@ import SnackDetails from "../Components/SnackDetails";
 function Show() {
   return (
     <div>
+      <h1>Snacks</h1>
       <SnackDetails />
     </div>
   );

@@ -2,9 +2,10 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import React from "react";
+import HeartHealth from "./HeartHealth";
 
-import heartSolid from "../assets/heart-solid.png";
-import heartOutline from "../assets/heart-regular.png";
+// import heartSolid from "../assets/heart-solid.png";
+// import heartOutline from "../assets/heart-regular.png";
 
 function SnackDetails() {
   const [snack, setSnack] = useState([]);
@@ -37,11 +38,12 @@ function SnackDetails() {
     <div className="Snackdetails">
       <article>
          <h2> <img src={snack.image}></img> </h2>
-        <h3>
+         <HeartHealth snackHealth={snack.is_healthy}/>
+        {/* <h3>
           {snack.is_healthy 
           ? <span> <img src={heartSolid}></img> </span> 
           : <span> <img src={heartOutline}></img> </span>}
-        </h3>
+        </h3> */}
           <h4>{snack.name}</h4>
         <h5>Fiber: {snack.fiber}</h5>
         <h5>Protein: {snack.protein}</h5>
