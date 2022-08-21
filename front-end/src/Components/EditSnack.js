@@ -54,6 +54,14 @@ function EditSnack() {
 
   return (
     <div className="Edit">
+      <section className="snackHealthChart">
+        <p>Snack Health is determined by:</p>
+        <ul>
+          <li>protein is above 5</li>
+          <li>or fiber is above 5</li>
+          <li>and added sugar is less than 5</li>
+        </ul>
+      </section>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <input

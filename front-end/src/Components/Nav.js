@@ -4,6 +4,7 @@ function Nav() {
   return (
     <div>
       <Link to="/">Snacks</Link>
+      <Link to="/snacks">List of Snacks</Link>
       <Link to="/snacks/new">New Snack</Link>
     </div>
   );
