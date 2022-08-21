@@ -73,6 +73,7 @@ function EditSnack() {
           placeholder="Name"
           required
         />
+        <br></br>
         <label htmlFor="fiber">Fiber:</label>
         <input
           id="fiber"
@@ -82,6 +83,7 @@ function EditSnack() {
           placeholder="Fiber Count"
           onChange={handleNumberChange}
         />
+        <br></br>
         <label htmlFor="protein">Protein:</label>
         <input
           id="protein"
@@ -91,6 +93,7 @@ function EditSnack() {
           placeholder="Protein Count"
           onChange={handleNumberChange}
         />
+        <br></br>
         <label htmlFor="added_sugar">Added Sugar:</label>
         <input
           id="added_sugar"
@@ -100,6 +103,7 @@ function EditSnack() {
           placeholder="Sugar Count"
           onChange={handleNumberChange}
         />
+        <br></br>
         <label htmlFor="image">Image url:</label>
         <input
           id="image"
@@ -108,10 +112,11 @@ function EditSnack() {
           onChange={handleTextChange}
         />
         <br />
+        <br></br>
         <input type="submit" />
       </form>
       <Link to={`/snacks/${id}`}>
-        <button>Nevermind!</button>
+        <button>NEVERMIND</button>
       </Link>
     </div>
   );

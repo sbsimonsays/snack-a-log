@@ -106,7 +106,7 @@ function NewSnack() {
       </form>
   <form>*/}
       <Link to={`/snacks`}>
-      Nevermind
+      <button>NEVERMIND</button>
       </Link>
       </form>
     </div>
