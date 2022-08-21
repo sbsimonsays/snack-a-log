@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../Styles/Stylin.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -104,10 +104,10 @@ function NewSnack() {
           Submit
         </Button>
       </form>
-      <form>
+  <form>*/}
       <Link to={`/snacks`}>
-        <Button variant="secondary">Back</Button>
-      </Link> */}
+      Nevermind
+      </Link>
       </form>
     </div>
   );
