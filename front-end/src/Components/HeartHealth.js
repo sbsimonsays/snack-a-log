@@ -1,5 +1,6 @@
 import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
+import "../Styles/Stylin.css";
 
 function HeartHealth({ snack }) {
   return (

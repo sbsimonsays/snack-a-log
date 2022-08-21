@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import React from "react";
 
+import "../Styles/Stylin.css";
 import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
 
@@ -34,7 +35,7 @@ function SnackDetails() {
 
   return (
     <div className="snackDetails">
-      <article>
+      <article className="Snacks">
         <h3>
           {" "}
           {snack.is_healthy

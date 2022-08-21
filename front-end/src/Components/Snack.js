@@ -1,10 +1,11 @@
 import React from "react";
 import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
+import "../Styles/Stylin.css";
 
 function Snack({ snack }) {
   return (
-    <div className="Snack">
+    <div className="Snacks">
       <a href={`/snacks/${snack.id}`}>
         <h4><img src={snack.image} alt={snack.is_healthy ? "healthy food" : "unhealthy food"}></img></h4>
       

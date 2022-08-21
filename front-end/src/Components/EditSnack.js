@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, Link, useParams } from "react-router-dom";
+import "../Styles/Stylin.css";
 
 const API = process.env.REACT_APP_API_URL;
 
