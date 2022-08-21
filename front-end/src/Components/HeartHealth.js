@@ -3,14 +3,13 @@ import heartOutline from "../assets/heart-regular.png";
 
 function HeartHealth({ snack }) {
   return (
-    <div className="heartHealthy">
-      <p>
-        {snack.is_healthy 
-        ? ( <img src={heartSolid} alt="healthy food" /> ) 
-        : ( <img src={heartOutline} alt="unhealthy food" /> )
-        }
-      </p>
-    </div>
+    <h4>
+      <img
+        className="heart"
+        src={snack.is_healthy ? heartSolid : heartOutline}
+        alt={snack.is_healthy ? "healthy food" : "unhealthy food"}
+      />
+    </h4>
   );
 }
 

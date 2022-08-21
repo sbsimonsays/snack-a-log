@@ -7,11 +7,7 @@ const confirmHealth = (snack) => {
     return null;
   }
 
-  if (snack.fiber >= 5 && snack.added_sugar < 5) {
-    return true;
-  }
-
-  if (snack.protein >= 5 && snack.added_sugar < 5) {
+  if (snack.fiber > 5 || snack.protein > 5 && snack.added_sugar < 5) {
     return true;
   }
 

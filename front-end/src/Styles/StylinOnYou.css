@@ -7,7 +7,7 @@ h1 {
 }
 
 main {
-    width: 90%;
+    width: 90;
     margin: auto 0;
 }
 
@@ -17,25 +17,18 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1em top bottom 15px, 3em left right 45px;
-    /* padding-left: '';
-    padding-right: ;
-    padding-top: ;
-    padding-bottom: ; */
-}
-
-nav {
     margin-bottom: 1em 15px;
-} 
+}
 
 a {
     text-decoration: none;
     color: rgb(235, 94, 40);
 }
 
-h4 {
+/* h4 {
     font-size: 15px;
     text-align: center;
-}
+} */
 
 .Snacks article {
     display: flex;

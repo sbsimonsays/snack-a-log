@@ -12,7 +12,7 @@ const {
   deleteSnack,
 } = require("../queries/snacks.js");
 
-// Read
+// Read (All)
 snacks.get("/", async (req, res) => {
   const allSnacks = await getAllSnacks();
   if (allSnacks[0]) {
@@ -22,7 +22,7 @@ snacks.get("/", async (req, res) => {
   }
 });
 
-// Read
+// Read (Singular/Specific ID)
 snacks.get("/:id", async (req, res) => {
   const { id } = req.params;
   const snack = await getSnack(id);
@@ -62,7 +62,12 @@ snacks.post("/", async (req, res) => {
 // Update
 snacks.put("/:id", async (req, res) => {
   const { id } = req.params;
-  const updatedSnack = await updateSnack(req.body, id);
+  const { body } = req;
+
+  body.name = checkName(body);
+  body.is_healthy = confirmHealth(body);
+
+  const updatedSnack = await updateSnack(body, id);
   if (updatedSnack.id) {
     res.status(200).json(updatedSnack);
   } else {

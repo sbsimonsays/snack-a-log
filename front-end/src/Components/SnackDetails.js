@@ -5,7 +5,6 @@ import React from "react";
 
 import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
-// import HeartHealth from "./HeartHealth";
 
 function SnackDetails() {
   const [snack, setSnack] = useState([]);
@@ -34,33 +33,26 @@ function SnackDetails() {
   };
 
   return (
-    <div className="Snacks">
+    <div className="snackDetails">
       <article>
-        <div>
-          <h4><img
-            src={snack.is_healthy ? heartSolid : heartOutline}
-            alt={snack.is_healthy ? "healthy food" : "unhealthy food"}
-          ></img></h4>
         <h3>
           {" "}
           {snack.is_healthy
             ? "This Snack is Healthy!"
             : "This Snack is Unhealthy!"}{" "}
         </h3>
-          </div>
+        <aside>
+          <img
+            src={snack.is_healthy ? heartSolid : heartOutline }
+            alt={snack.is_healthy ? "healthy food" : "unhealthy food"}
+          ></img>
+        </aside>
         <div>
           <img src={snack.image} alt={snack.name}></img>
-          <br></br>
-          <h4><strong>{snack.name}</strong></h4>
-          <h5>
-            <strong>Fiber:</strong> {snack.fiber}{" "}
-          </h5>
-          <h5>
-            <strong>Protein:</strong> {snack.protein}{" "}
-          </h5>
-          <h5>
-            <strong>Added Sugar:</strong> {snack.added_sugar}{" "}
-          </h5>
+          <h4>{snack.name}</h4>
+          <h5>Fiber: {snack.fiber} </h5>
+          <h5>Protein: {snack.protein} </h5>
+          <h5>Added Sugar: {snack.added_sugar} </h5>
         </div>
       </article>
       <div className="snackNavi">

@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
 import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
 
 // Pages
+import Index from "./Pages/Index";
+import Show from "./Pages/Show";
+import New from "./Pages/New";
 import Edit from "./Pages/Edit";
 import FourOFour from "./Pages/FourOFour";
-import Index from "./Pages/Index";
-import New from "./Pages/New";
-import Show from "./Pages/Show";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
