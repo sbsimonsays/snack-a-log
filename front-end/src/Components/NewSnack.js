@@ -100,11 +100,7 @@ function NewSnack() {
         />
         <br></br>
         <input type="submit" />
-        {/* <Button variant="success" type="submit">
-          Submit
-        </Button>
-      </form>
-  <form>*/}
+        <br></br>
       <Link to={`/snacks`}>
       <button>NEVERMIND</button>
       </Link>

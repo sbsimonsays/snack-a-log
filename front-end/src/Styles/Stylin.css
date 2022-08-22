@@ -1,68 +1,91 @@
 body {
-    font-family: 'Overlock', cursive;
+  font-family: "Overlock", cursive;
 }
 
 h1 {
-    font-family: 'Carter One', cursive;
+  font-family: "Carter One", cursive;
 }
 
 main {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
 
 nav {
-    background-color: rgb(37, 36, 34);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
-    margin-bottom: 1em;
+  background-color: rgb(37, 36, 34);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 4em;
+  padding-right: 4em;
+  margin-bottom: 1em;
+  font-size: x-large;
+  font-family: "Carter One", cursive;
+  color: rgb(235, 94, 40);
+}
+
+nav a {
+  color: rgb(235, 94, 40);
+}
+
+.navSnacks {
+    font-size: xx-large;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(235, 94, 40);
+  text-decoration: none;
+  color: rgb(235, 94, 40);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: rgb(235, 94, 40);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(235, 94, 40);
 }
 
 h4 {
-    font-size: 1em;
-    text-align: center;
+  font-size: 1em;
+  text-align: center;
 }
 
 .Snacks article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1em;
-} 
-
-article div {
-    width: 150px;
-    padding: 1em;
-    background-color: rgb(255, 252, 242);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1em;
 }
 
-/* .Snacks img {
-    width: 150px;
-} */
+article div {
+  width: 150px;
+  padding: 1em;
+  background-color: rgb(255, 252, 242);
+}
+
+.snackImage {
+  width: 150px;
+}
 
 .footer {
-    background-color: rgb(37, 36, 34);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
-    margin-bottom: 1em;
-    flex-shrink: 0;
+  background-color: rgb(37, 36, 34);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  flex-shrink: 0;
+}
+
+.footer a {
+  color: rgb(235, 94, 40);
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Carter One", cursive;
+  align-content: center;
 }

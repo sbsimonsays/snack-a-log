@@ -5,9 +5,9 @@ function Nav() {
   return (
     <div>
     <nav>
-      <Link to="/">Snacks</Link>
-      <Link to="/snacks">List of Snacks</Link>
+      <Link to="/" className="navSnacks">Snacks</Link>
       <Link to="/snacks/new">New Snack</Link>
+      <Link to="/snacks">List of Snacks</Link>
     </nav>
     </div>
   );

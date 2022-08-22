@@ -59,16 +59,16 @@ function SnackDetails() {
       <div className="snackNavi">
         <div>
           <Link to={`/snacks`}>
-            <button>Back</button>
+            <button>BACK</button>
           </Link>
         </div>
         <div>
           <Link to={`/snacks/${id}/edit`}>
-            <button>Edit</button>
+            <button>EDIT</button>
           </Link>
         </div>
         <div>
-          <button onClick={handleDelete}>Delete</button>
+          <button onClick={handleDelete}>DELETE</button>
         </div>
       </div>
     </div>

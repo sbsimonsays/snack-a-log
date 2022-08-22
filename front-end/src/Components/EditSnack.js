@@ -55,7 +55,7 @@ function EditSnack() {
 
   return (
     <div className="Edit">
-      <section className="snackHealthChart">
+      <section className="healthChart">
         <p>Snack Health is determined by:</p>
         <ul>
           <li>protein is above 5</li>
@@ -104,7 +104,7 @@ function EditSnack() {
           onChange={handleNumberChange}
         />
         <br></br>
-        <label htmlFor="image">Image url:</label>
+        <label htmlFor="image">Image URL:</label>
         <input
           id="image"
           value={snack.image}
@@ -112,12 +112,12 @@ function EditSnack() {
           onChange={handleTextChange}
         />
         <br />
-        <br></br>
         <input type="submit" />
-      </form>
+        <br></br>
       <Link to={`/snacks/${id}`}>
         <button>NEVERMIND</button>
       </Link>
+      </form>
     </div>
   );
 }
