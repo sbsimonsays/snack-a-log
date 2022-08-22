@@ -1,5 +1,11 @@
 # Full Stack Application Pair Project
 
+Partner: John Prado
+
+Netlify Deployment: https://zesty-empanada-0c566e.netlify.app/
+Heroku Deployment: https://morning-island-64375.herokuapp.com/
+
+
 ## Snack-a-log
 
 Create an app that allows users to log their favorite snacks. Add functionality that allows users to see whether or not their snack is healthy based on a simple algorithm.
